@@ -7,14 +7,17 @@ import 'package:flutter_application_3/theme/light_mode.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  ChangeNotifierProvider(
-    create: (context) => Shop(),
-    child: const MyApp(),
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => Shop(),
+      child: const MyApp(),
+    ),
   );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
