@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/components/my_drawer.dart';
 import 'package:flutter_application_3/components/my_product_tile.dart';
-import 'package:flutter_application_3/models/product.dart';
 import 'package:flutter_application_3/models/shop.dart';
 import 'package:provider/provider.dart';
 
@@ -10,7 +9,7 @@ class ShopPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final shop = context.watch<Shop>();
+    final shop = context.watch<Shop>().shop;
 
     return Scaffold(
       appBar: AppBar(
@@ -20,17 +19,11 @@ class ShopPage extends StatelessWidget {
       ),
       drawer: const MyDrawer(),
       body: ListView.builder(
-        itemCount: shop.shop.length,
+        itemCount: shop.length,
         itemBuilder: (context, index) {
-          final product = shop.shop[index];
+          final product = shop[index];
           return MyProductTile(
             product: product,
-            onAddToCart: () {
-              shop.addToCart(product);
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text("${product.name} added to cart!")),
-              );
-            },
           );
         },
       ),
