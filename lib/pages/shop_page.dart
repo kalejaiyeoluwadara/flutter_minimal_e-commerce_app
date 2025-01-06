@@ -6,6 +6,9 @@ import 'package:provider/provider.dart';
 
 class ShopPage extends StatelessWidget {
   const ShopPage({super.key});
+  void handlePressed(context) {
+    Navigator.pushNamed(context, '/cart_page');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +19,11 @@ class ShopPage extends StatelessWidget {
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
           backgroundColor: Colors.transparent,
           title: const Center(child: Text('Shop Page')),
+          actions: [
+            IconButton(
+                onPressed: () => handlePressed(context),
+                icon: const Icon(Icons.shopping_cart))
+          ],
         ),
         drawer: const MyDrawer(),
         body: ListView(
