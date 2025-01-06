@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/components/my_button.dart';
 import 'package:flutter_application_3/components/my_drawer.dart';
-import 'package:flutter_application_3/components/my_product_tile.dart';
 import 'package:flutter_application_3/models/product.dart';
 import 'package:flutter_application_3/models/shop.dart';
 import 'package:provider/provider.dart';

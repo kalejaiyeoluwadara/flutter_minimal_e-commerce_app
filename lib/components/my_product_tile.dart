@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/main.dart';
 import 'package:flutter_application_3/models/product.dart';
 import 'package:flutter_application_3/models/shop.dart';
 import 'package:provider/provider.dart';
@@ -59,7 +58,8 @@ class MyProductTile extends StatelessWidget {
               ),
               Text(
                 product.name,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style:
+                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
               Text(
                 product.description,
