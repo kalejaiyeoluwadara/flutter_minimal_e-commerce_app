@@ -3,7 +3,7 @@ import 'package:flutter_application_3/models/shop.dart';
 import 'package:flutter_application_3/pages/cart_page.dart';
 import 'package:flutter_application_3/pages/intro_page.dart';
 import 'package:flutter_application_3/pages/shop_page.dart';
-import 'package:flutter_application_3/test_pages/test.dart';
+import 'package:flutter_application_3/test_pages/sliver_app_bar.dart';
 import 'package:flutter_application_3/theme/light_mode.dart';
 import 'package:provider/provider.dart';
 
@@ -22,9 +22,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Minimal E-commerce App',
       debugShowCheckedModeBanner: false,
-      home: const TestPage(),
+      home: const CustomSliverAppBar(),
       // home: const IntroPage(),
       theme: lightMode,
       routes: {
