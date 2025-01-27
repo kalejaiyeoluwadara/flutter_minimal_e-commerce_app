@@ -3,6 +3,7 @@ import 'package:flutter_application_3/models/shop.dart';
 import 'package:flutter_application_3/pages/cart_page.dart';
 import 'package:flutter_application_3/pages/intro_page.dart';
 import 'package:flutter_application_3/pages/shop_page.dart';
+import 'package:flutter_application_3/test_pages/test.dart';
 import 'package:flutter_application_3/theme/light_mode.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: const IntroPage(),
+      home: const TestPage(),
+      // home: const IntroPage(),
       theme: lightMode,
       routes: {
         '/intro_page': (context) => const IntroPage(),
