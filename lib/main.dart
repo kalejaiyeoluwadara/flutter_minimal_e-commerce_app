@@ -28,7 +28,8 @@ class MyApp extends StatelessWidget {
       home: const CustomTabBar(),
       // home: const CustomSliverAppBar(),
       // home: const IntroPage(),
-      theme: lightMode,
+      // theme: lightMode,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
       routes: {
         '/intro_page': (context) => const IntroPage(),
         '/shop_page': (context) => const ShopPage(),
