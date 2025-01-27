@@ -12,7 +12,7 @@ class CustomSliverAppBar extends StatelessWidget {
           SliverAppBar(
               leading: const Icon(Icons.menu),
               backgroundColor: Colors.deepPurple,
-              floating: true,
+              // floating: true,
               pinned: true,
               title: const Text(
                 "SliverAppBar Example",
